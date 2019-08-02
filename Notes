@@ -1,0 +1,7 @@
+To run a jar file from command line use the below syntax:
+
+java -cp "MyJar.jar;lib\*" com.somepackage.subpackage.Main
+
+lib\* - for including the external jar files 
+com.somepackage.Main - call the class from where Main() is invoked
+Add the config file after this command if necessary.
