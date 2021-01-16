@@ -1,0 +1,29 @@
+package com;
+
+public class Solution {
+    public static String[] fizzBuzz(int A) {
+        
+        String[] str = new String[A];
+        for( int i=0;i<A;i++){
+            if((i+1)%3 == 0 && (i+1) %5==0){
+                str[i]="FizzBuzz";
+                
+            }
+            else if ((i+1)%3==0)
+                str[i]="Fizz";
+            else if ((i+1)%5==0)
+                str[i]="Buzz";
+            else
+                str[i]=""+i;
+        }
+        return str;
+    }
+
+
+
+  public static void main(String[] args) {
+        int A=3;
+        System.out.println(fizzBuzz(A));
+  }
+
+}
