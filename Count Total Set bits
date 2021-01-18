@@ -1,0 +1,123 @@
+/*Count Total Set Bits
+Problem Description
+
+Given a positive integer A, the task is to count the total number of set bits in the binary representation of all the numbers from 1 to A.
+
+Return the count modulo 109 + 7.
+
+
+
+Problem Constraints
+1 <= A <= 109
+
+
+
+Input Format
+First and only argument is an integer A.
+
+
+
+Output Format
+Return an integer denoting the ( Total number of set bits in the binary representation of all the numbers from 1 to A )modulo 109 + 7.
+
+
+
+Example Input
+Input 1:
+
+ A = 3
+Input 2:
+
+ A = 1
+
+
+Example Output
+Output 1:
+
+ 4
+Output 2:
+
+ 1
+
+
+Example Explanation
+Explanation 1:
+
+ DECIMAL    BINARY  SET BIT COUNT
+    1          01        1
+    2          10        1
+    3          11        2
+ 1 + 1 + 2 = 4 
+ Answer = 4 % 1000000007 = 4
+Explanation 2:
+
+ A = 1
+  DECIMAL    BINARY  SET BIT COUNT
+    1          01        1
+ Answer = 1 % 1000000007 = 1
+*/
+
+package com;
+
+public class Solution {
+    public static int solve(int A){
+      return (int)(solve1(A)%1000000007);
+    }
+
+    public static long solve1(int A) {
+        if(A == 0)
+            return 0;
+            long maxPow = highestPowerOf2(A); // calculate the max power of 2 fully covering the bits
+            // calculate the bits which are set in the max power of 2
+            long     bitSetInMaxPow = (1<< (maxPow -1) )*maxPow; 
+            /*
+                for example maxPow = 3;
+                now check the bits set till 2^3 = 8 
+                ABC
+                000
+                001
+                010
+                011
+                100
+                101
+                110
+                111
+                Here in C col , total bits set is 8/2 , in B 8/2 in A 8/2 = 8/2+8/2+8/2 = 8/2*3
+                Calculate for maxPow = 4    2^4 = 16
+                16/2+16/2+16/2+16/2 = 16/2*4
+                so we can write this as (2^maxPow /2 )*maxPow = (2^(maxPow -1) )*maxPow
+                2^pow = 1 << pow ( setting the bit to the pow ) i.e 2^3 = 8 = 1<<3 = 1000
+                
+            
+            */
+            // now we are left with the bits of the remaining numbers 
+            long mostSignificantSetBits = A - (1 << maxPow) +1 ; // exmaple if A = 10 , 10-8 = 2 basically 8 means 7 (0-7) so we need to add 1 to justify this
+             long ans = bitSetInMaxPow + mostSignificantSetBits + solve1(A-(1<<maxPow));
+             return ans;
+            
+            
+        }
+
+public static long highestPowerOf2(long  x){
+  long  pow = 0;
+  while(x>0){
+    pow++;
+    x=x/2;
+  }
+  return pow-1;
+}
+
+
+  public static void main(String[] args) {
+        
+        System.out.println(solve(4));
+        
+        //int[] A={0};//{0,0,0,0,0, 1, 1, 1, 3, 2, 1, 1, 2, 5, 9, 6, 5};//{0,0,0,0,9,9,9};////{0,0,0,0,00,0,1,2,3,4};//{9,9,9};//{1,2}
+      //int[] B= plusOne(A);
+        //for (int i =0;i<B.length;i++){
+         // System.out.println(B[i]);
+        //}
+        //System.out.println((solve(A)));
+  }
+
+}
