@@ -1,0 +1,32 @@
+
+Notes for hashMap 
+
+1. To get a value in a hashmap if u have a key 
+	map.get(key)
+
+	
+2. To iterate of hashmap (java 8 feature )
+ 	map.forEach((keys , value)-> {
+		  
+         
+              System.out.println("Key: " + keys + " Value: " + value);
+       
+
+      });
+ 
+3. To get the key in a hashmap
+ 	
+ 	Set<Integer> keys = map.keySet();
+	for (Integer key : keys ) {
+		if (map.get(key).equals(diff)) {
+			}
+			}						 }
+			
+4. The ArrayList values in your HashMap are references. You don't need to "put it back to HashMap". You're operating on the object that already exists as a value in the HashMap.
+5. For reading the key in reverse order 
+ ArrayList<String> keys = new ArrayList<String>(map.keySet());
+     for(int i=keys.size()-1; i>=0;i--){
+    	 res.add(new ArrayList(map.get(keys.get(i))));
+    //     System.out.println(map.get(keys.get(i)));
+     }
+	
