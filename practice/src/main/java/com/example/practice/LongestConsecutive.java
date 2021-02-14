@@ -23,7 +23,7 @@ public class LongestConsecutive {
 				int start = A[i];
 				while(map.containsKey(start+1)) {
 					count++;
-					start++;
+					start++; 
 				}
 				if (res<count)
 					{
