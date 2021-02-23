@@ -77,7 +77,7 @@ public class LittlePony {
 			res.add(sum);
 		}
 		for (int i = 0; i < B.size(); i++) {
-
+			System.out.println("B :"+B.get(i));
 			int index = findIndex(res, B.get(i));
 			pres.add(index);
 			
@@ -88,18 +88,20 @@ public class LittlePony {
 	}
 
 	public static int findIndex(ArrayList<Integer> arr, int target) {
-
+		
 		int start = 0, end = arr.size() - 1;
 		int mid = 0;
 		int j = arr.size();
+		
 		if (target > arr.get(arr.size() - 1))
 			return arr.size();
 		if (target < arr.get(0))
 			return 0;
-		while (j >= 0) {
+		
+		while (start <= end) {
 			mid = (start + end) / 2;
 			System.out.println("mid: " + arr.get(mid));
-			if (target > arr.get(mid) && target < arr.get(mid + 1)) {
+			if ((target > arr.get(mid) && target < arr.get(mid + 1)) || (target == arr.get(mid))) {
 				System.out.println("pppp");
 				return mid + 1;
 			}
@@ -117,14 +119,10 @@ public class LittlePony {
 		return 0;
 	}
 
-	public static void main(String[] args) {
-		ArrayList<Integer> arr = new ArrayList<Integer>();
-		arr.add(3);
-		arr.add(7);
-		arr.add(11);
-		arr.add(17);
-		int target = 4;
-		System.out.println(findIndex(arr, target));
-	}
+	/*
+	 * public static void main(String[] args) { ArrayList<Integer> arr = new
+	 * ArrayList<Integer>(); arr.add(3); arr.add(7); arr.add(11); arr.add(17); int
+	 * target = 4; System.out.println(findIndex(arr, target)); }
+	 */
 
 }
