@@ -1,0 +1,8 @@
+Notes :
+How to Resolve Local Variable Defined in an Enclosing Scope Must be Final or Effectively Final Error
+https://www.netjstech.com/2015/09/resolving-local-variable-defined-in-enclosing-scope-must-be-final-or-effectively-final-error.html
+
+Concurrent Modification exception 
+- it occurs when u try to modify the map while u r iterating it , modify in the sense inserting or removing elements
+- to over come this issue use array list
+Reference : UniqueElement solution
