@@ -21,8 +21,7 @@ public class UniqueElements {
 				  int a = map.get(A.get(j));
 				  System.out.println(a+1);
 				  
-				  map.put(A.get(j), a+1);
-				 
+				  map.put(A.get(j), a+1); 
 			  }
 			  else
 			  {  map.put(A.get(j), 1);

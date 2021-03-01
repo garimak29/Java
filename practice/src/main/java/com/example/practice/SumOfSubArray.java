@@ -14,7 +14,7 @@ public class SumOfSubArray {
 		
 			sum += A.get(i);
 			arr.add(sum);
-	//		System.out.println(sum);
+		System.out.println(sum);
 
 		}
 		i = 0; j=1;
