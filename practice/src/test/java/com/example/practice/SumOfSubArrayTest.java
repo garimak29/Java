@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class SumOfSubArrayTest {
 
-//	@Test
+	@Test
 	void test() {
 		int[] a = {1, 2, 3, 4, 5};
 		int B = 5;
@@ -23,7 +23,7 @@ class SumOfSubArrayTest {
 		actual = SumOfSubArray.solve(arr, B);
 		assertEquals(expected, actual);
 	}
-		//@Test
+		@Test
 	void test1() {
 		int[] a = {  42, 9, 38, 36, 48, 33, 36, 50, 38, 8, 13, 37, 33, 38, 17, 25, 50, 50, 41, 29, 34, 18, 16, 6, 49, 16, 21, 29, 41, 7, 37, 14, 5, 30, 35, 26, 38, 35, 9, 36, 34, 39, 9, 4, 41, 40, 3, 50, 27, 17, 14, 5, 31, 42, 5, 39, 38, 38, 47, 24, 41, 5, 50, 9, 29, 14, 19, 27, 6, 23, 17, 1, 22, 38, 35, 6, 35, 41, 34, 21, 30, 45, 48, 45, 37 };
 		int B = 100;
@@ -38,7 +38,7 @@ class SumOfSubArrayTest {
 		actual = SumOfSubArray.solve(arr, B);
 		assertEquals(expected, actual);
 	}
-//	@Test
+	@Test
 	void tes1t() {
 		int[] a = {5, 10, 20, 100, 105};
 		int B = 110;

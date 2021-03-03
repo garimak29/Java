@@ -19,6 +19,7 @@ public class TwoSum {
 			//		System.out.println("get function "+ map.containsValue(diff));
 				 if(map.containsValue(diff) ) {
 					 res[1]= i+1;
+					 
 					 Set<Integer> keys = map.keySet();
 					 for (Integer key : keys ) {
 						 

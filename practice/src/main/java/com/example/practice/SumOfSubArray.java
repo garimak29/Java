@@ -17,10 +17,24 @@ public class SumOfSubArray {
 		System.out.println(sum);
 
 		}
+		// case if sum of n natural numbers 
+		int temp =0;
+		for (i = 0; i < A.size(); i++) {
+			temp+=A.get(i);
+			if (temp == B) {
+				{
+					for(int k=0;k<=i;k++)
+						res.add(A.get(k));
+
+					return res;
+				}
+			}
+		}
+		// difference of prefixSum array and check if any subarray can be used
 		i = 0; j=1;
 		while (i <= j && i<A.size() && j<A.size()) {
 			int diff = arr.get(j) - arr.get(i);
-			System.out.println(diff +" j "+j+" i "+i);
+		//	System.out.println(diff +" j "+j+" i "+i);
 			if (diff < B)
 				j++;
 			else if (diff > B)
@@ -36,12 +50,7 @@ public class SumOfSubArray {
 		}
 		if (res.size() == 0)
 			{
-			for (i = 0; i < A.size(); i++) {
-				if (A.get(i) == B) {
-					res.add(A.get(i));
-					return res;
-				}
-			}
+			
 			res.add(-1);
 			}
 		return res;
