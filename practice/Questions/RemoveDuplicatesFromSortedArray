@@ -1,0 +1,54 @@
+Remove Duplicates from Sorted Array
+Problem Description
+
+Given a sorted array A, remove the duplicates in place such that each element appears only once and return the new length.
+
+Note: Even though we want you to return the new length, make sure to change the original array as well in place otherwise you will not be able to pass the test cases. Also, do not allocate extra space for another array, you must do this in place with constant memory.
+
+
+
+Problem Constraints
+1 <= |A| <= 106
+
+1 <= A[i] <= 2*109
+
+
+
+Input Format
+First and only argurment containing the integer array A.
+
+
+
+Output Format
+Return an integer from the function as per the question.
+
+
+
+Example Input
+Input 1:
+
+A = [1 1 2]
+Input 2:
+
+A = [1 2 2 3 3]
+
+
+Example Output
+Output 1:
+
+2
+Output 2:
+
+3
+
+
+Example Explanation
+Explanation 1:
+
+Updated Array: [1 2] which has 2 elements.
+Explanation 2:
+
+Updated Array: [1 2 3] which has 3 elements.
+
+
+

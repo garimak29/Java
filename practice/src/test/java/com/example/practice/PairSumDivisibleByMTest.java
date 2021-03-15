@@ -18,7 +18,7 @@ class PairSumDivisibleByMTest {
 	//	System.out.println(A.size());
 		int B = 2;
 		int expected = 4;
-		int actual = PairSumDivisibleByM.solve1(A, B);
+		int actual = PairSumDivisibleByM.solve(A, B);
 		assertEquals(expected, actual);
 	}
 	
@@ -32,11 +32,13 @@ class PairSumDivisibleByMTest {
 	//	System.out.println(A.size());
 		int B = 28;
 		int expected = 1;
-		int actual = PairSumDivisibleByM.solve1(A, B);
+		int actual = PairSumDivisibleByM.solve(A, B);
 		assertEquals(expected, actual);
 	}
-	@Test
+@Test
 	void test3() {
+		System.out.println("check this case");
+		
 		int[] a = { 69, 50, 9, 94, 94, 100, 11, 30, 57, 83, 71, 40, 75, 53, 12, 62, 15, 38, 30, 78, 10, 42, 74, 31, 42, 13, 20, 66, 74, 15, 67, 23, 50, 71, 3, 86, 9, 52, 56, 92, 60, 55, 30, 87, 2 };
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		for(int i =0;i<a.length;i++) {
@@ -45,7 +47,7 @@ class PairSumDivisibleByMTest {
 	//	System.out.println(A.size());
 		int B = 21;
 		int expected = 52;
-		int actual = PairSumDivisibleByM.solve1(A, B);
+		int actual = PairSumDivisibleByM.solve(A, B);
 		assertEquals(expected, actual);
 	}
 	@Test
@@ -58,7 +60,7 @@ class PairSumDivisibleByMTest {
 	//	System.out.println(A.size());
 		int B = 37;
 		int expected = 84;
-		int actual = PairSumDivisibleByM.solve1(A, B);
+		int actual = PairSumDivisibleByM.solve(A, B);
 		assertEquals(expected, actual);
 	}
 

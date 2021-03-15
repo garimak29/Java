@@ -15,7 +15,7 @@ public class PallindromeRecurssive {
 			return 1;
 		}
 
-		if (A.charAt(i) == A.charAt(j)) {
+		if (A.charAt(i) ==  A.charAt(j)) {
 			checkPalindrome(A, i + 1, j - 1);
 		}
 
