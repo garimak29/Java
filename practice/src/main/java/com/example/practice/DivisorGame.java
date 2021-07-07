@@ -46,7 +46,7 @@ public class DivisorGame {
 		int count =0; int i =0;
 		ArrayList<ArrayList<Integer>> arr = new ArrayList();
 		for(i =1 ; i<A;i++) {
-			
+			;
 		}
 		return count ;
 	}
