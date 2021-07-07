@@ -44,7 +44,7 @@ public class DivisorGame {
 	
 	public static int sieve(int A, int B, int C) {
 		int count =0; int i =0;
-		ArrayList<ArrayList<Integer>> arr = new ArrayList
+		ArrayList<ArrayList<Integer>> arr = new ArrayList();
 		for(i =1 ; i<A;i++) {
 			
 		}
