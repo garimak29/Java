@@ -10,7 +10,9 @@ public class EvenOdd {
 			if(A.get(i)%2 != 0 && A.get(i+1)%2==0 && A.get(i+1)%2!=0 ) {
 				A.remove(i+1);
 				res++;
-			}else if (A.get(i)%2 != 0 && A.get(i+1)%2==0 && A.get(i+1)%2!=0 )
+			}else if (A.get(i)%2 != 0 && A.get(i+1)%2==0 && A.get(i+1)%2!=0 ) {
+				;
+			}
 		}
 		return res;
 	}
