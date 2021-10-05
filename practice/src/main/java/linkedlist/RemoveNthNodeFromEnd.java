@@ -68,14 +68,14 @@ See
 
 package linkedlist;
 
-import linkedlist.LinkedList.Node;
+import linkedlist.LinkedList.ListNode;
 
 public class RemoveNthNodeFromEnd {
 
-	public static Node removeNthFromEnd(Node A, int B) {
+	public static ListNode removeNthFromEnd(ListNode A, int B) {
 		// nth node from end
 		// len - n +1
-		Node head = A, start = A;
+		ListNode head = A, start = A;
 		int len = 0;
 		// length
 		while (head != null) {
@@ -89,7 +89,7 @@ public class RemoveNthNodeFromEnd {
 
 		while (j > 0) {
 			j--;
-			System.out.println("Current data " + A.data);
+			System.out.println("Current data " + A.val);
 			start = start.next;
 
 		}
@@ -108,10 +108,10 @@ public class RemoveNthNodeFromEnd {
 		return A;
 	}
 
-	public static void removeNode(Node A) {
-		Node temp;
+	public static void removeNode(ListNode A) {
+		ListNode temp;
 		if (A != null ) {
-			System.out.println("Current data " + A.data);
+			System.out.println("Current data " + A.val);
 			temp = A.next;
 			A.next = null;
 			A.next = temp.next;

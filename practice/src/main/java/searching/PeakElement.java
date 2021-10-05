@@ -74,8 +74,8 @@ public class PeakElement {
 		int flag =-1;
 		while(start < end && A.size() > 2) {
 			mid = start + ( end- start)/2;
-			System.out.println(A.get(mid));
-			System.out.println((mid-2)+" : "+(mid+2));
+			System.out.println("mid "+A.get(mid));
+			System.out.println("mid - 2 and + 2 = "+(mid-2)+" : "+(mid+2));
 			if(( (mid+1)!= A.size() && (mid-1)!= -1 && A.get(mid) >= A.get(mid+1) ) && (A.get(mid) >= A.get(mid-1) ))
 				return A.get(mid);
 			else if(A.get(mid) < A.get(mid+1) ) // right

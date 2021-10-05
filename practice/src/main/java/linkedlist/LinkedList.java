@@ -2,26 +2,26 @@ package linkedlist;
 
 public class LinkedList {
 
-	Node head;
+	ListNode head;
 
-	public class Node {
-		int data;
-		Node next;
+	public class ListNode {
+		int val;
+		ListNode next;
 
-		Node(int x) {
-			this.data = x;
+		ListNode(int x) {
+			this.val = x;
 			next = null;
 		}
-		public void printNodeList(Node n) {
+		public void printNodeList(ListNode n) {
 			
 			while(n.next != null) {
-				System.out.println(n.data);
+				System.out.println(n.val);
 				n = n.next;
 			}
-			System.out.println(n.data);
+			System.out.println(n.val);
 		}
 	}
-		public int linkedListLength(Node linkedList) {
+		public int linkedListLength(ListNode linkedList) {
 			int len = 0;
 			while (linkedList.next != null) {
 				len++;
@@ -38,18 +38,18 @@ public class LinkedList {
 				insertAtStart(data);
 			}
 			else {
-				Node node = head ;
+				ListNode listNode = head ;
 				for(int i=0;i<index-1;i++) {
-					node = node.next;
+					listNode = listNode.next;
 				}
 				
 				//1>>2>>3>>4?? null
 				//insert 5 at 3
 				// 2 > next will point to 5
 				// 5 > next will point to 3
-				Node newNode = new Node(data);
-				newNode.next = node.next;
-				node.next = newNode;
+				ListNode newNode = new ListNode(data);
+				newNode.next = listNode.next;
+				listNode.next = newNode;
 				
 			}
 		}
@@ -57,29 +57,29 @@ public class LinkedList {
 		public void delete(int index) {
 			
 		}
-		public Node insert(int data) {
-			Node newNode = new Node(data);
+		public ListNode insert(int data) {
+			ListNode newNode = new ListNode(data);
 			
 			if(head ==  null) {
 				head= newNode;
 				
 			}
 			else {
-				Node node = head;
-				while(node.next != null) {
-					node = node.next;
+				ListNode listNode = head;
+				while(listNode.next != null) {
+					listNode = listNode.next;
 				}
 				 // 1>>2>>3>>null
 				//4>>null
-				node.next=newNode;
+				listNode.next=newNode;
 				
 			}
 			return null;
 		}
 		
 
-		public Node insertAtStart(int data) {
-			Node newNode = new Node(data);
+		public ListNode insertAtStart(int data) {
+			ListNode newNode = new ListNode(data);
 			
 			if(head == null) {
 				head = newNode;
@@ -100,12 +100,12 @@ public class LinkedList {
 		
 		
 	public void printList() {
-		Node n = head;
+		ListNode n = head;
 		while(n.next != null) {
-			System.out.println(n.data);
+			System.out.println(n.val);
 			n = n.next;
 		}
-		System.out.println(n.data);
+		System.out.println(n.val);
 	}
 	
 	public static void main(String[] args) {

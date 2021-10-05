@@ -1,6 +1,6 @@
 package linkedlist;
 
-import linkedlist.LinkedList.Node;
+import linkedlist.LinkedList.ListNode;
 
 public class PalindromeList3 {
 	
@@ -10,19 +10,19 @@ public class PalindromeList3 {
 		else 
 			return b;
 	}
-	public static int largestPrefix(Node h1 , Node h2) {
+	public static int largestPrefix(ListNode h1 , ListNode h2) {
 		int ans = 0;
-		while(h1 != null && h2!= null && h1.data == h2.data) {
+		while(h1 != null && h2!= null && h1.val == h2.val) {
 			h1 = h1.next;
 			h2= h2.next;
 		}
 		return ans;
 	}
 
-	public static int lPalin(Node A) {
+	public static int lPalin(ListNode A) {
 
 		int res = 0;
-		Node prev = null, head = A, curr = head, next;
+		ListNode prev = null, head = A, curr = head, next;
 
 		while (curr != null) {
 			next = curr.next;
