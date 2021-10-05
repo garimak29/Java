@@ -1,11 +1,14 @@
 package linkedlist;
 
-import linkedlist.LinkedList.Node;
+import java.util.ArrayList;
+import java.util.List;
+
+import linkedlist.LinkedList.ListNode;
 
 public class PalindromeList2 {
 	// this function will work only if the len is > 1
-	public static Node reverseList(Node B, int len) {
-		Node cur, prev, next;
+	public static ListNode reverseList(ListNode B, int len) {
+		ListNode cur, prev, next;
 		cur = B;
 		prev = null;
 		next = null;
@@ -23,17 +26,19 @@ public class PalindromeList2 {
 
 	}
 
-	public static int lPalin(Node A) {
+	public static int lPalin(ListNode A) {
 		int res = 0;
-		Node B, head, reversedNode;
+		ListNode B, head, reversedNode;
 		B = A;
 		head = A;
 		int len = 0;
-
+		ArrayList<Integer> arr = new ArrayList<Integer>();
 		while (head != null) {
 			len++;
 			// System.out.println(head.data);
+			arr.add(head.val);
 			head = head.next;
+			
 		}
 		if (len > 1)
 			B = reverseList(B, len);
@@ -41,27 +46,35 @@ public class PalindromeList2 {
 		reversedNode = B;
 
 		System.out.println("printing reversed list ");
+		
+		
 		while (B != null) {
-			System.out.println(B.data);
+			System.out.println(B.val);
+			
 			B = B.next;
 		}
+		
 
 		int checkLen = 0;
-		checkLen = checkPalin(reversedNode, A);
+		checkLen = checkPalin(reversedNode, arr);
 		System.out.println(checkLen);
+		if(len %2 != 0)
+			checkLen++;
 		if (checkLen == len)
 			res = 1;
 		return res;
 	}
 	
-	public static int checkPalin(Node reversedNode , Node A) {
+	public static int checkPalin(ListNode reversedNode , List<Integer> arr) {
 		int checkLen = 0;
-		while (reversedNode != null && A != null && (reversedNode.data == A.data)) {
-			System.out.println(A.data+" --> "+reversedNode.data);
-			checkLen++;
+		int i =0;
+		while (reversedNode != null && i<arr.size()/2 && (reversedNode.val == arr.get(i))) {
+			System.out.println(arr.get(i)+" --> "+reversedNode.val);
+			checkLen+=2;
 			reversedNode = reversedNode.next;
-			A = A.next;
+			i++;
 		}
+		
 		return checkLen;
 	}
 
@@ -69,6 +82,8 @@ public class PalindromeList2 {
 		// TODO Auto-generated method stub
 		LinkedList ll = new LinkedList();
 		ll.insert(1);
+		ll.insert(2);
+	//	ll.insert(3);
 		ll.insert(2);
 		ll.insert(1);
 		System.out.println(lPalin(ll.head));

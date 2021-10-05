@@ -14,7 +14,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 		int  expected = 2;
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		A = TestingPack.convertToArrayList(a);
-		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates4(A);
+		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates1(A);
 		assertEquals(expected , actual);
 	}
 	
@@ -24,7 +24,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 		int  expected = 2;
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		A = TestingPack.convertToArrayList(a);
-		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates4(A);
+		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates1(A);
 		assertEquals(expected , actual);
 	}
 	@Test
@@ -33,7 +33,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 		int  expected = 3;
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		A = TestingPack.convertToArrayList(a);
-		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates4(A);
+		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates1(A);
 		assertEquals(expected , actual);
 	}
 	
@@ -43,7 +43,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 		int  expected = 4;
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		A = TestingPack.convertToArrayList(a);
-		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates4(A);
+		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates1(A);
 		assertEquals(expected , actual);
 	}
 	
@@ -53,7 +53,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 		int  expected = 1;
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		A = TestingPack.convertToArrayList(a);
-		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates4(A);
+		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates1(A);
 		assertEquals(expected , actual);
 	}
 	
@@ -63,7 +63,7 @@ class RemoveDuplicatesFromSortedArrayTest {
 		int  expected = 1;
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		A = TestingPack.convertToArrayList(a);
-		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates4(A);
+		int actual = RemoveDuplicatesFromSortedArray.removeDuplicates1(A);
 		assertEquals(expected , actual);
 	}
 
