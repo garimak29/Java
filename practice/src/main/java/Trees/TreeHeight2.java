@@ -32,7 +32,7 @@ public class TreeHeight2 {
 		A.right = C;
 		B.left = D;
 		D.left = E;
-		solve(A);
+		System.out.println(solve(A));
 	/*		A
 		3B		1C
 	2D

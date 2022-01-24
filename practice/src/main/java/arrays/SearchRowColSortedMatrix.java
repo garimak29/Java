@@ -46,6 +46,7 @@ A[1][2]= 2
 package arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SearchRowColSortedMatrix {
 	public int solve(ArrayList<ArrayList<Integer>> A, int B) {
@@ -65,6 +66,41 @@ public class SearchRowColSortedMatrix {
 		return pos;
 	}
 	
+	public static int solve1(ArrayList<ArrayList<Integer>> A, int B) {
+		for(int i =0;i<A.size();i++) {
+			for(int j=0;j<A.get(i).size();j++) {
+				if(A.get(i).get(j) == B) {
+					System.out.println(i+" - "+j);
+					i++;
+					j++;
+					return i*1009+j;
+				}
+			}
+		}
+		return -1;
+		
+	}
 	
+	public static void main(String args[]) {
+		/*
+		 * ArrayList<ArrayList<Integer>> A = new ArrayList<ArrayList<Integer>>();
+		 * A.add(new ArrayList<Integer>()); A.get(0).add(1,2); A.add(new
+		 * ArrayList<Integer>()); A.get(1).add(3,4); System.out.println(solve1(A,2));
+		 */
+		
+		 ArrayList<ArrayList<Integer> > x
+         = new ArrayList<ArrayList<Integer> >();
+
+   
+     x.add(
+         new ArrayList<Integer>(Arrays.asList(1,2,3)));
+
+     
+     x.add( new ArrayList<>(Arrays.asList(4,5,6)));
+     x.add( new ArrayList<>(Arrays.asList(7,8,9)));
+     // Adding values to R3
+    System.out.println(x);
+  System.out.println(solve1(x,3));
+	}
 
 }

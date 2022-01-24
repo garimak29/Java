@@ -107,18 +107,69 @@ public class PeakElement {
 	}
 	
 	
+	public static int solve1(ArrayList<Integer> A) {
+		int res =-1,max = Integer.MIN_VALUE;
+		for(int i =0;i<A.size()-1;i++) {
+			if(A.get(i)>A.get(i+1)) {
+				return A.get(i);
+			}
+			if(A.get(i)>max) {
+				max = A.get(i);
+			}
+		}
+		
+		if(A.get(A.size()-1) > max)
+			max = A.get(A.size()-1);
+		
+		return max;
+		
+	}
 	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] A = {1, 1000000000, 1000000000 };
+		//int[] A = {1, 1000000000, 1000000000 };
+		//int[] A = {1,2,3,4,5};
+		int[] A = {5,17,100, 4};
 		ArrayList<Integer> a = new ArrayList<Integer>();
 		for(int i =0;i<A.length;i++) {
 			a.add(A[i]);
 		}
 		
-		System.out.println(solve(a));
+		System.out.println(solve1(a));
 
 	}
 
 }
+/*
+
+ * 
+ * public class Solution {
+  public int solve(int[] A) {
+    // Try to think when will the unique answer exists, 
+    //Unique answer only exists when the elements first increases and then decreases.
+    // Check is first or last element is the answer.
+    int n = A.length;
+    //base cases
+    if (n == 1)
+      return A[0];
+    if (A[1] <= A[0])
+      return A[0];
+    if (A[n - 1] >= A[n - 2])
+      return A[n - 1];
+    int low = 1, high = n - 2;
+    while (low <= high) {
+      int mid = (high - low) / 2 + low;
+      if (A[mid] >= A[mid - 1] && A[mid] >= A[mid + 1])
+        return A[mid];
+      else if (A[mid] >= A[mid - 1])
+        low = mid + 1;
+      else
+        high = mid - 1;
+    }
+    return -1;
+  }
+}
+ * 
+ * */
+ 
