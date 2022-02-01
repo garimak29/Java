@@ -10,7 +10,7 @@ public class InsertInHeaps {
 		TreeNode A = new TreeNode(arr.get(0));
 		for(int i =1;i<arr.size();i++) {
 			if(A.val < arr.get(i)) {
-				reheapify(A);
+		//		reheapify(A);
 			}
 		}
 	}

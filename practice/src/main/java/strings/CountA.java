@@ -93,7 +93,7 @@ public class CountA {
 				 }
 			 }
 		 }
-		 count = (factorial(count-1))
+	//	 count = (factorial(count-1));
 		 return count;
 	    }
 

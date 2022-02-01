@@ -70,11 +70,11 @@ public class LetterPhone {
 	 public ArrayList<String> letterCombinations(String A) {
 		 
 		 //base case
-		 if()
+		/* if()
 		 for(int i =0;i<A.length();i++) {
 			 A
 		 }
-		 
+		 */
 		 return result ;
 	    }
 	 public ArrayList<String> generate(String A, int index) {

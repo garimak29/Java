@@ -79,6 +79,7 @@ package arrays;
 public class RotateMatrix {
 
 	  public int search(final int[] A, int B) {
+		  return 0;
 	    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
