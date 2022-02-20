@@ -1,4 +1,7 @@
-/*Problem Description
+/*
+Level order or Breadth first search :
+
+Problem Description
 
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 
@@ -99,6 +102,27 @@ import java.util.Queue;
 
 public class LevelOrderTraversal {
 
+	public static void breadthFirstSearch(TreeNode root) {
+		if(root == null){
+			return;
+		}
+
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.add(root);
+		while(!queue.isEmpty()){
+			TreeNode node = queue.poll();
+			System.out.println(node.val);
+			if(node.left != null){
+				queue.add(node.left);
+
+			}
+			if(node.right != null){
+				queue.add(node.right);
+			}
+		}
+
+	}
+
 	public static ArrayList<ArrayList<Integer>> levelOrder(TreeNode A) {
 		ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
 		Queue<TreeNode> queue = new LinkedList<TreeNode>();
@@ -178,8 +202,8 @@ public class LevelOrderTraversal {
 		F.left = E;
 		F.right = G;
 
-		System.out.println(levelOrder(D));
-
+	//	System.out.println(levelOrder(D));
+		breadthFirstSearch(D);
 		/*
 		4
 	2		6

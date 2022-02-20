@@ -53,7 +53,7 @@ public class Subset {
 
     static List<List<Integer>> subsetArrayRemoveDuplicate(List<Integer> arr){
         List<List<Integer>> outer = new ArrayList<>();
-        arr.sort();
+        //arr.sort();
         // blank subset
         outer.add(new ArrayList<>());
         for(int num:arr){

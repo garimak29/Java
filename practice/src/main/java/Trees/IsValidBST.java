@@ -16,6 +16,26 @@ public class IsValidBST {
 		return 1;
 	}
 
+	public static int isValidBST1(TreeNode A) {
+		if( isValid(A, Integer.MIN_VALUE , Integer.MAX_VALUE))
+			return 1 ;
+		else
+			return 0;
+
+	}
+
+	public static boolean isValid(TreeNode A , int l , int r){
+		if(A == null)
+			return true;
+		if(A.val >= l && A.val <= r){
+			boolean left = isValid(A.left , l , A.val);
+			boolean right = isValid(A.right , A.val , r);
+			return (left && right);
+		}
+		else
+			return false;
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TreeNode A = new TreeNode(1);
@@ -32,7 +52,7 @@ public class IsValidBST {
 		F.left=G;
 		F.right = E;
 		
-		System.out.println(isValidBST(D));
+		System.out.println(isValidBST1(D));
 		
 		/*
 					4

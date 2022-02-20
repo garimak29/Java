@@ -61,6 +61,7 @@ Explantion 2:
 package misc;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CommonElements {
 
@@ -70,7 +71,7 @@ public class CommonElements {
 		B.sort(null);
 		int i = 0, j = 0;
 		while (i < A.size() && j < B.size()) {
-			if (A.get(i) == B.get(j)) {
+			 if (A.get(i) == B.get(j)) {
 				res.add(A.get(i));
 				i++;
 				j++;
@@ -84,15 +85,41 @@ public class CommonElements {
 
 	}
 
+
+	public static ArrayList<Integer> solve1(ArrayList<Integer> A, ArrayList<Integer> B) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		HashMap<Integer , Integer> map = new HashMap<>();
+		for(int i=0;i<A.size();i++){
+			if(map.containsKey(A.get(i)))
+				map.put(A.get(i),map.get(A.get(i))+1);
+			else
+				map.put(A.get(i) , 1);
+		}
+
+		for(int j=0;j<B.size();j++){
+			System.out.println(map.containsKey(B.get(j)) +" - "+ map.get(B.get(j)) );
+			if(map.get(B.get(j)) != null && map.containsKey(B.get(j)) && map.get(B.get(j)) > 0){
+				//while(map.get(B.get(j)) > 0)
+
+					res.add(B.get(j));
+					map.put(B.get(j) , map.get(B.get(j))-1);
+
+			}
+		}
+		res.sort(null);
+		return res;
+
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a = { 1, 1, 1,1,1,1, 2,2,2,2,2,2,2,2,2,2,2,2, 3, 4, 5 };
-		int[] b = { 1, 1, 1,1,1,2, 2,2,2,2,2,2,2,2,2, 5 };
+		int[] a = { 1 ,1 ,1,2,2,2,2 };
+		int[] b = { 1,1,2,3 };
 		ArrayList<Integer> A = new ArrayList<Integer>();
 		ArrayList<Integer> B = new ArrayList<Integer>();
 		A = utilPackage.UtilClass.ArrayToArrayList(a);
 		B = utilPackage.UtilClass.ArrayToArrayList(b);
-		System.out.println(solve(A, B));
+		System.out.println(solve1(A, B));
 
 	}
 

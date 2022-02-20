@@ -15,6 +15,12 @@ public class SumOfElementsOfBST {
 
 	}
 
+	public static int sumNodes2(TreeNode A){
+		if(A==null)
+			return 0;
+		return A.val + sumNodes2(A.left)+sumNodes2(A.right);
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -29,6 +35,7 @@ public class SumOfElementsOfBST {
 		D.right = E;
 		
 		System.out.println(sumNodes(A));
+		System.out.println(sumNodes2(A));
 
 	}
 
