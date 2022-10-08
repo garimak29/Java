@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class LinkedList {
+public class LinkedList<E> {
 
 	ListNode head;
 
@@ -110,12 +110,12 @@ public class LinkedList {
 	
 	public static void main(String[] args) {
 
-		LinkedList list = new LinkedList();
+	/*	LinkedList<E> list = new LinkedList<E>();
 		list.insert(1);
 		list.insert(2);
 		list.insertAtStart(0);
 		list.insert(8);
 		list.insertInBetween(2, 10);
 		list.printList();
-	}
+*/	}
 }

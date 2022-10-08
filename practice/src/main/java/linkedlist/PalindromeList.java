@@ -47,7 +47,7 @@ public class PalindromeList {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LinkedList ll = new LinkedList();
+		LinkedList<Integer> ll = new LinkedList<Integer>();
 		ll.insert(1);
 		 ll.insert(3);
 		ll.insert(3);

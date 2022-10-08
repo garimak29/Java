@@ -121,7 +121,7 @@ public class RemoveNthNodeFromEnd {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LinkedList ll = new LinkedList();
+		LinkedList<Integer> ll = new LinkedList<>();
 		/*
 		 * ll.insert(20); ll.insert(380); ll.insert(349); ll.insert(322);
 		 * ll.insert(389); ll.insert(424); ll.insert(429); ll.insert(120);

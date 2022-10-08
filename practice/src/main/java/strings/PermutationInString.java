@@ -79,6 +79,41 @@ public class PermutationInString {
        return String.valueOf(charArray);
     }
 
+    private static int newSolution(String A,String B){
+
+                HashMap<Character , Integer> map = new HashMap();
+                for(int i =0;i< A.length();i++){
+                    char c = A.charAt(i);
+                    if(map.containsKey(c)){
+                        map.put(c,map.get(c)+1);
+                    }
+
+                    else
+                        map.put(c,1);
+                }
+
+                int count =0;
+                HashMap<Character , Integer> mapNew = new HashMap();
+                map = mapNew;
+                for(int j=0;j<B.length()-A.length();j++){
+                    map = mapNew;
+                    for(int k=0;k<A.length();k++){
+                        if(mapNew.containsKey(B.charAt(j)) && mapNew.get(B.charAt(j))>0){
+                            mapNew.put(B.charAt(j),mapNew.get(B.charAt(j))-1);
+                            if(k==A.length()-1){
+                                count++;
+                            }
+                        }else{
+                            break;
+                        }
+
+                    }
+                }
+
+                return count;
+
+
+    }
     public static void main(String[] args) {
         System.out.println(solve("aca" , "acaa"));
         System.out.println(solve("abc" , "abcbacabc"));
